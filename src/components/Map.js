@@ -1,23 +1,56 @@
 import { useState } from 'react'
 import GoogleMapReact from 'google-map-react'
-import LocationInfoBox from './LocationInfoBox';
-import LocationMarker from './LocationMarker'
+import LocationInfoBox from './LocationInfoBox'
+import WildfiresMarker from './WildfiresMarker'
+import VolcanoesMarker from './VolcanoesMarker'
+import SeaLakeIceMarker from './SeaLakeIceMarker'
+import SevereStormsMarker from './SevereStormsMarker'
+import UnknownDisasterMarker from './UnknownDisasterMarker'
 
-const NATURAL_EVENT_WILDFIRE = 'wildfires';
+const NATURAL_DISASTER_WILDFIRES = 'wildfires';
+const NATURAL_DISASTER_VOLCANOES = 'volcanoes';
+const NATURAL_DISASTER_SEALAKEICE = 'seaLakeIce';
+const NATURAL_DISASTER_SEVERESTORMS = 'severeStorms';
 
 const Map = ({ eventData, center, zoom }) => {
   const [locationInfo, setLocationInfo] = useState(null)
 
   const markers = eventData.map((ev) => {
-    console.log(ev.categories[0].id)
-    if(ev.categories[0].id === NATURAL_EVENT_WILDFIRE) {
-        return <LocationMarker 
+
+    if(ev.categories[0].id === NATURAL_DISASTER_WILDFIRES) {
+        return <WildfiresMarker 
         lat={ev.geometry[0].coordinates[1]} 
         lng={ev.geometry[0].coordinates[0]} 
         onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
         />
     }
-    return null
+    if(ev.categories[0].id === NATURAL_DISASTER_VOLCANOES) {
+        return <VolcanoesMarker 
+        lat={ev.geometry[0].coordinates[1]} 
+        lng={ev.geometry[0].coordinates[0]} 
+        onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+        />
+    }
+    if(ev.categories[0].id === NATURAL_DISASTER_SEALAKEICE) {
+        return <SeaLakeIceMarker 
+        lat={ev.geometry[0].coordinates[1]} 
+        lng={ev.geometry[0].coordinates[0]} 
+        onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+        />
+    }
+    if(ev.categories[0].id === NATURAL_DISASTER_SEVERESTORMS) {
+        return <SevereStormsMarker 
+        lat={ev.geometry[0].coordinates[1]} 
+        lng={ev.geometry[0].coordinates[0]} 
+        onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+        />
+    } else {
+      return <UnknownDisasterMarker 
+        lat={ev.geometry[0].coordinates[1]} 
+        lng={ev.geometry[0].coordinates[0]} 
+        onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+        />
+    }
 })
   
 
