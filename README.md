@@ -1,3 +1,18 @@
+ISSUES:
+1. Display all disasters: wildfires, seaLakeIce, volcanoes, severeStorms
+2. Match with appropriate icons
+3. Update ID and Title on each disaster
+4. Track hurricanes
+5. Update the CSS
+
+SOLUTIONS:
+1. 
+2. 
+3. 
+4. 
+5. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
