@@ -5,7 +5,7 @@ body {
 
 .header {
   padding: 10px;
-  background-color: firebrick;
+  background-color: #747880;
   color: #fff;
   position: fixed;
   top: 0;
@@ -22,7 +22,7 @@ body {
 
 .map {
   width: 100vw;
-  height: 70vh;
+  height: 100vh;
   position: relative; 
 }
 
@@ -31,19 +31,19 @@ body {
 }
 
 .red {
-  color: red;
+  color: #F73718;
 }
 
 .blue {
-  color: blue;
+  color: #0e2e4c;
 }
 
 .white {
   color: white;
 }
 
-.black {
-  color: black;
+.volcano-color {
+  color: #7c3413;
 }
 
 .loader {
