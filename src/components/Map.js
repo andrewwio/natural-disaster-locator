@@ -15,10 +15,11 @@ const NATURAL_DISASTER_SEVERESTORMS = 'severeStorms';
 const Map = ({ eventData, center, zoom }) => {
   const [locationInfo, setLocationInfo] = useState(null)
 
-  const markers = eventData.map((ev) => {
+  const markers = eventData.map((ev, index) => {
 
     if(ev.categories[0].id === NATURAL_DISASTER_WILDFIRES) {
         return <WildfiresMarker 
+        key={index}
         lat={ev.geometry[0].coordinates[1]} 
         lng={ev.geometry[0].coordinates[0]} 
         onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
@@ -26,6 +27,7 @@ const Map = ({ eventData, center, zoom }) => {
     }
     if(ev.categories[0].id === NATURAL_DISASTER_VOLCANOES) {
         return <VolcanoesMarker 
+        key={index}
         lat={ev.geometry[0].coordinates[1]} 
         lng={ev.geometry[0].coordinates[0]} 
         onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
@@ -33,17 +35,23 @@ const Map = ({ eventData, center, zoom }) => {
     }
     if(ev.categories[0].id === NATURAL_DISASTER_SEALAKEICE) {
         return <SeaLakeIceMarker 
+        key={index}
         lat={ev.geometry[0].coordinates[1]} 
         lng={ev.geometry[0].coordinates[0]} 
         onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
         />
     }
     if(ev.categories[0].id === NATURAL_DISASTER_SEVERESTORMS) {
-        return <SevereStormsMarker 
-        lat={ev.geometry[0].coordinates[1]} 
-        lng={ev.geometry[0].coordinates[0]} 
-        onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
-        />
+      return ev.geometry.map((geo) => {
+        return (
+          <SevereStormsMarker 
+          key={index}
+          lat={geo.coordinates[1]}
+          lng={geo.coordinates[0]}
+          onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+          />
+        )
+      })      
     } else {
       return <UnknownDisasterMarker 
         lat={ev.geometry[0].coordinates[1]} 
