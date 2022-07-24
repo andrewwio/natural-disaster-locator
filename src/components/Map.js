@@ -25,7 +25,8 @@ const Map = ({ eventData, center, zoom }) => {
         onClick={() => setLocationInfo({ 
           title: ev.title, 
           id: ev.categories[0].title, 
-          location: ev.geometry[0].coordinates, 
+          latitude: ev.geometry[0].coordinates[1], 
+          longitude: ev.geometry[0].coordinates[0],
           date: ev.geometry[0].date 
         })}
         />
@@ -38,7 +39,8 @@ const Map = ({ eventData, center, zoom }) => {
         onClick={() => setLocationInfo({ 
           title: ev.title, 
           id: ev.categories[0].title, 
-          location: ev.geometry[0].coordinates, 
+          latitude: ev.geometry[0].coordinates[1], 
+          longitude: ev.geometry[0].coordinates[0],
           date: ev.geometry[0].date 
         })}
         />
@@ -51,7 +53,8 @@ const Map = ({ eventData, center, zoom }) => {
         onClick={() => setLocationInfo({ 
           title: ev.title, 
           id: ev.categories[0].title, 
-          location: ev.geometry[0].coordinates, 
+          latitude: ev.geometry[0].coordinates[1], 
+          longitude: ev.geometry[0].coordinates[0],
           date: ev.geometry[0].date 
         })}
         />
@@ -66,8 +69,9 @@ const Map = ({ eventData, center, zoom }) => {
           onClick={() => setLocationInfo({ 
             title: ev.title, 
             id: ev.categories[0].title, 
-            location: ev.geometry[0].coordinates, 
-            date: ev.geometry[0].date 
+            latitude: geo.coordinates[1], 
+            longitude: geo.coordinates[0],
+            date: geo.date 
           })}
           />
         )
@@ -78,8 +82,9 @@ const Map = ({ eventData, center, zoom }) => {
         lng={ev.geometry[0].coordinates[0]} 
         onClick={() => setLocationInfo({ 
           title: "Congratulations! You've found an new natural disaster. Please contact the developer so we can add it to our app. Thank you!",
-          id: ev.categories[0].title,
-          location: ev.geometry[0].coordinates, 
+          id: ev.categories[0].title, 
+          latitude: ev.geometry[0].coordinates[1], 
+          longitude: ev.geometry[0].coordinates[0],
           date: ev.geometry[0].date 
         })}
         />

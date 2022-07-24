@@ -6,6 +6,7 @@ ISSUES:
 5. [complete] Update the CSS
 6. [complete] When person clicks on question mark, display message that says "notify the developer!"
 7. Format date and coordinates and then CSS
+8. [complete] Track hurricane date and coordinates
 
 SOLUTIONS:
 1. Used multiple if else to cover all the disasters currently rendered
@@ -15,6 +16,7 @@ SOLUTIONS:
 5. Changed pixels to rem and added colors to icons
 6. Surprisingly easy, I just made the title into a string
 7. 
+8. Simple spelling mistake, easily solved, the same as marking the locations of the markers on the map
 
 
 # Getting Started with Create React App
