@@ -5,7 +5,7 @@ ISSUES:
 4. [complete] Track hurricanes
 5. [complete] Update the CSS
 6. [complete] When person clicks on question mark, display message that says "notify the developer!"
-7. Format date and coordinates and then CSS
+7. [complete] Format date and coordinates and then CSS
 8. [complete] Track hurricane date and coordinates
 
 SOLUTIONS:
@@ -15,7 +15,8 @@ SOLUTIONS:
 4. Used array.map (i initally thought that i had to use a for loop)
 5. Changed pixels to rem and added colors to icons
 6. Surprisingly easy, I just made the title into a string
-7. 
+7. Intl.DateTimeFormat('en-US',{formatting}).format(new Date(value)) 
+...yeah not super easy to remember
 8. Simple spelling mistake, easily solved, the same as marking the locations of the markers on the map
 
 
