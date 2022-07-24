@@ -22,7 +22,12 @@ const Map = ({ eventData, center, zoom }) => {
         key={index}
         lat={ev.geometry[0].coordinates[1]} 
         lng={ev.geometry[0].coordinates[0]} 
-        onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+        onClick={() => setLocationInfo({ 
+          title: ev.title, 
+          id: ev.categories[0].title, 
+          location: ev.geometry[0].coordinates, 
+          date: ev.geometry[0].date 
+        })}
         />
     }
     if(ev.categories[0].id === NATURAL_DISASTER_VOLCANOES) {
@@ -30,7 +35,12 @@ const Map = ({ eventData, center, zoom }) => {
         key={index}
         lat={ev.geometry[0].coordinates[1]} 
         lng={ev.geometry[0].coordinates[0]} 
-        onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+        onClick={() => setLocationInfo({ 
+          title: ev.title, 
+          id: ev.categories[0].title, 
+          location: ev.geometry[0].coordinates, 
+          date: ev.geometry[0].date 
+        })}
         />
     }
     if(ev.categories[0].id === NATURAL_DISASTER_SEALAKEICE) {
@@ -38,7 +48,12 @@ const Map = ({ eventData, center, zoom }) => {
         key={index}
         lat={ev.geometry[0].coordinates[1]} 
         lng={ev.geometry[0].coordinates[0]} 
-        onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+        onClick={() => setLocationInfo({ 
+          title: ev.title, 
+          id: ev.categories[0].title, 
+          location: ev.geometry[0].coordinates, 
+          date: ev.geometry[0].date 
+        })}
         />
     }
     if(ev.categories[0].id === NATURAL_DISASTER_SEVERESTORMS) {
@@ -48,7 +63,12 @@ const Map = ({ eventData, center, zoom }) => {
           key={index}
           lat={geo.coordinates[1]}
           lng={geo.coordinates[0]}
-          onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+          onClick={() => setLocationInfo({ 
+            title: ev.title, 
+            id: ev.categories[0].title, 
+            location: ev.geometry[0].coordinates, 
+            date: ev.geometry[0].date 
+          })}
           />
         )
       })      
@@ -56,7 +76,12 @@ const Map = ({ eventData, center, zoom }) => {
       return <UnknownDisasterMarker 
         lat={ev.geometry[0].coordinates[1]} 
         lng={ev.geometry[0].coordinates[0]} 
-        onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+        onClick={() => setLocationInfo({ 
+          title: "Congratulations! You've found an new natural disaster. Please contact the developer so we can add it to our app. Thank you!",
+          id: ev.categories[0].title,
+          location: ev.geometry[0].coordinates, 
+          date: ev.geometry[0].date 
+        })}
         />
     }
 })

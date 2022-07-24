@@ -1,18 +1,20 @@
 ISSUES:
 1. [complete] Display all disasters: wildfires, seaLakeIce, volcanoes, severeStorms
 2. [complete] Match with appropriate icons
-3. Update ID and Title on each disaster
+3. [complete] Update LocationInfoBox
 4. [complete] Track hurricanes
-5. Update the CSS
-6. When person clicks on question mark, display message that says "notify the developer!"
+5. [complete] Update the CSS
+6. [complete] When person clicks on question mark, display message that says "notify the developer!"
+7. Format date and coordinates and then CSS
 
 SOLUTIONS:
 1. Used multiple if else to cover all the disasters currently rendered
 2. Created multiple markers in the components folder
-3. 
+3. Changed title, disaster type, coordinates, and date
 4. Used array.map (i initally thought that i had to use a for loop)
-5. 
-6. 
+5. Changed pixels to rem and added colors to icons
+6. Surprisingly easy, I just made the title into a string
+7. 
 
 
 # Getting Started with Create React App
