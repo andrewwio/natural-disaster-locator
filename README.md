@@ -2,7 +2,7 @@ ISSUES:
 1. [complete] Display all disasters: wildfires, seaLakeIce, volcanoes, severeStorms
 2. [complete] Match with appropriate icons
 3. Update ID and Title on each disaster
-4. Track hurricanes
+4. [complete] Track hurricanes
 5. Update the CSS
 6. When person clicks on question mark, display message that says "notify the developer!"
 
@@ -10,8 +10,9 @@ SOLUTIONS:
 1. Used multiple if else to cover all the disasters currently rendered
 2. Created multiple markers in the components folder
 3. 
-4. 
+4. Used array.map (i initally thought that i had to use a for loop)
 5. 
+6. 
 
 
 # Getting Started with Create React App
