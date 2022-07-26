@@ -81,7 +81,7 @@ const Map = ({ eventData, center, zoom }) => {
         lat={ev.geometry[0].coordinates[1]} 
         lng={ev.geometry[0].coordinates[0]} 
         onClick={() => setLocationInfo({ 
-          title: "Congratulations! You've found an new natural disaster. Please contact the developer so we can add it to our app. Thank you!",
+          title: "Congratulations! You've found a new natural disaster. Please contact the developer so we can add it to our app. Thank you!",
           id: ev.categories[0].title, 
           latitude: ev.geometry[0].coordinates[1], 
           longitude: ev.geometry[0].coordinates[0],
