@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.35ed94a1.css",
-    "main.js": "/static/js/main.ebf17abc.js",
-    "static/js/787.106c028f.chunk.js": "/static/js/787.106c028f.chunk.js",
-    "index.html": "/index.html",
-    "main.35ed94a1.css.map": "/static/css/main.35ed94a1.css.map",
-    "main.ebf17abc.js.map": "/static/js/main.ebf17abc.js.map",
-    "787.106c028f.chunk.js.map": "/static/js/787.106c028f.chunk.js.map"
+    "main.css": "/natural-disaster-locator/static/css/main.35ed94a1.css",
+    "main.js": "/natural-disaster-locator/static/js/main.bd69d465.js",
+    "static/js/787.106c028f.chunk.js": "/natural-disaster-locator/static/js/787.106c028f.chunk.js",
+    "index.html": "/natural-disaster-locator/index.html",
+    "main.35ed94a1.css.map": "/natural-disaster-locator/static/css/main.35ed94a1.css.map",
+    "main.bd69d465.js.map": "/natural-disaster-locator/static/js/main.bd69d465.js.map",
+    "787.106c028f.chunk.js.map": "/natural-disaster-locator/static/js/787.106c028f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.35ed94a1.css",
-    "static/js/main.ebf17abc.js"
+    "static/js/main.bd69d465.js"
   ]
 }
