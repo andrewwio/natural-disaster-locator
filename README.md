@@ -1,3 +1,5 @@
+LIVE DEMO AT https://andrewwio.github.io/natural-disaster-locator/
+
 ISSUES:
 1. [complete] Display all disasters: wildfires, seaLakeIce, volcanoes, severeStorms
 2. [complete] Match with appropriate icons
